@@ -1,18 +1,21 @@
+import { useState } from "react";
 import { ADD, CLEAR, SUB, SWEET } from "../contanst";
 
 const intialState = {
     count: 0,
 };
+// const [increment,seticrement]=useState('1')
 const counterData = (state = intialState, action) => {
+    console.warn('Action',action);
     switch (action.type) {
         case ADD: {
             return {
-                count: state.count + 1
+                count: state.count + action.payload
             };
         }
         case SUB: {
             return {
-                count: state.count - 1
+                count: state.count - action.payload
             };
         }
         case SWEET: {

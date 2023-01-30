@@ -2,17 +2,17 @@ import { ADD, CLEAR, SUB, SWEET } from "../contanst"
 
 
 export const add=(data)=>{
-    console.warn("action called",data); 
+    console.warn("action called",Number(data)); 
   return{
     type:ADD,
-    data
+    payload:Number(data)
   }
 }
 export const sub=(data)=>{
     console.warn("action called",data); 
   return{
     type:SUB,
-    data
+    payload:Number(data)
   }
 }
 export const sweet=(data)=>{
