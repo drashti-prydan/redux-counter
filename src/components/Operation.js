@@ -7,8 +7,8 @@ import { add, clear, sub, sweet } from "../redux/action/CounterAction";
 import LoginReducer from "../redux/reducer/rootReducer";
 
 const Operation = () => {
-  const [increment,setIncrement]=useState(1);
-  const dispatch = useDispatch('');
+  const [increment, setIncrement] = useState(1);
+  const dispatch = useDispatch("");
   let data = useSelector((state) => state.rootReducer.counterData.count);
   let isvalid = useSelector((state) => state.rootReducer.LoginReducer.isvalid);
   // console.warn(data);
@@ -19,14 +19,14 @@ const Operation = () => {
     dispatch(sub(increment));
   };
   const alert = () => {
-    if (isvalid == false) {
+    if (isvalid === null) {
       Swal.fire("please click on login button and  login..");
     } else {
       Swal.fire({ title: "This count's come from redux store:" + data });
     }
   };
   const authentication = (func) => {
-    if (isvalid == false) {
+    if (isvalid === null) {
       Swal.fire("please click on login button and  login..");
     } else {
       func();
@@ -59,7 +59,7 @@ const Operation = () => {
         <Row style={{ textAlign: "center", marginTop: "10%" }}>
           <Col>
             <input
-              style={{ width: "50px",height:'35px',textAlign:'center' }}
+              style={{ width: "50px", height: "35px", textAlign: "center" }}
               aria-label="Set increment"
               value={increment}
               onChange={(e) => setIncrement(e.target.value)}

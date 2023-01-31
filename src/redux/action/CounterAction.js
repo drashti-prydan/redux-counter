@@ -1,6 +1,7 @@
 import { ADD, CLEAR, SUB, SWEET } from "../contanst"
 
 
+
 export const add=(data)=>{
     console.warn("action called",Number(data)); 
   return{

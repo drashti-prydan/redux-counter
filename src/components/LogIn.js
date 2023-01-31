@@ -5,13 +5,15 @@ import { Button, Card, Container, Form } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { Navigate, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import { LoginAction } from "../redux/action/LoginAction";
+import { clearLocalStorage, LoginAction } from "../redux/action/LoginAction";
 import Counter from "./Counter";
 import userData from '../userList.json'
+// import Header from "./Header";
 
 function LogIn() {
     const [Email, setEmail] = useState('')
-    const [password, setpassword] = useState('')
+    const [password, setpassword] = useState('');
+    // const [button,setbutton]=useState('');
     const dispatch = useDispatch();
     const navigate=useNavigate();
     // let data1 = useSelector((state) => state.LoginReducer.data1);
@@ -19,7 +21,7 @@ function LogIn() {
     const intialvalues = {
         email: '',
         password: ''
-    }
+    } 
     const handelsubmitting = (e) => {
         console.warn('data check');
         e.preventDefault();
@@ -27,7 +29,14 @@ function LogIn() {
         if (valid) {
             Swal.fire("login Successfully...", "", "success")
             dispatch(LoginAction(valid))
-            navigate('/')
+            localStorage.setItem('email',Email);
+            localStorage.setItem('password',password)
+        //     if(valid === valid){
+        //         <Button className="justify-content-right d-flex"
+        //     onClick={(()=>dispatch(clearLocalStorage()))}
+        //     variant="warning">Log out</Button>
+        //     }
+              navigate("/")
         }
         else {
             setEmail("")
