@@ -1,0 +1,26 @@
+.size{
+  width: 18rem;
+  height: 30rem;
+  padding: 11px;
+}
+.size:hover{
+  box-shadow: 1px 2px 3px 2px rgb(44, 75, 104);
+}
+.imgsize{
+  width: 150px;
+  /* height: 100px; */
+  padding: 12px;
+  margin-top: 24px;
+  margin-bottom: 20px;
+  margin-left: 50px;
+}
+.textalign{
+    /* display: -webkit-inline-box; */
+   text-align:-webkit-auto;
+}
+.buttonalign{
+  justify-items: center;
+  display: block;
+  /* position: relative; */
+  padding-left: 61px;
+}

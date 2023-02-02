@@ -11,6 +11,8 @@ import LogIn from "./components/LogIn";
 import Home from "./components/Home";
 import Features from "./components/Features";
 import Header from "./components/Header";
+import Calculator from "./components/other_componets/Calculator";
+import About_Us from "./components/About_Us";
 function App() {
   const location = useLocation();
   useEffect(() => {
@@ -24,10 +26,10 @@ function App() {
       {/* <Router> */}
       <Routes>
         <Route path="/" element={<Home />} />
-
         <Route path="/login" element={<LogIn />} />
-
+        <Route path="/calculator" element={<Calculator />}></Route>
         <Route path="/features" element={<Features />}></Route>
+        <Route path="/about_us" element={<About_Us/>}></Route>
       </Routes>
       {/* </Router> */}
     </>
