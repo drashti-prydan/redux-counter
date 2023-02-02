@@ -13,8 +13,9 @@ function FeaturesCard(props) {
       <div>
         {/* <h3>Demo</h3> */}
         <div className="m-5">
-          <Card className="size">
+          <Card className="size" style={{marginTop:'88px',}}>
             <Card.Img 
+            style={{width:'200px'}}
                 className="imgsize" 
                 variant="top"
                 src={props.Img} />

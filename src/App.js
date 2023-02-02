@@ -5,14 +5,22 @@ import {
   Routes,
   useLocation,
 } from "react-router-dom";
-import Counter from "./components/Counter";
-import Operation from "./components/Operation";
+// import Counter from "./components/Counter";
+// import Operation from "./components/Operation";
 import LogIn from "./components/LogIn";
 import Home from "./components/Home";
 import Features from "./components/Features";
-import Header from "./components/Header";
+// import Header from "./components/Header";
 import Calculator from "./components/other_componets/Calculator";
-import About_Us from "./components/About_Us";
+// import Aboutus from './components/AboutUs'
+import AboutUs from './components/AboutUs'
+import Sidebar from "./components/SideBar";
+// import  { AboutUs, OurAim, OurVision } from "./components/AboutUs";
+// import { Services, ServicesOne, ServicesThree, ServicesTwo } from "./components/Service";
+// import Contact from "./components/Contact";
+// import { Events, EventsOne, EventsTwo } from "./components/Event";
+// import Support from "./components/Support";
+// import SideNavBar from "./components/SideNavBar"
 function App() {
   const location = useLocation();
   useEffect(() => {
@@ -20,18 +28,14 @@ function App() {
   }, [location.pathname]);
   return (
     <>
-      {/* <Counter/>
-      <Operation/> */}
-      {location.pathname !== "/login" && <Header />}
-      {/* <Router> */}
+      {location.pathname !== "/login" && <Sidebar />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<LogIn />} />
         <Route path="/calculator" element={<Calculator />}></Route>
         <Route path="/features" element={<Features />}></Route>
-        <Route path="/about_us" element={<About_Us/>}></Route>
+        <Route path="/aboutus" element={<AboutUs/>}></Route>
       </Routes>
-      {/* </Router> */}
     </>
   );
 }
