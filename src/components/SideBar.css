@@ -1,0 +1,24 @@
+.design{
+    justify-content: center;
+    display:flex;
+    width: 257px;
+}
+.list {
+}
+a {
+    font-size: 24px !important;
+    text-decoration-line: none;
+    color:black;
+}
+
+.dropdown-menu {
+    border: none;
+}
+/* hr{
+
+    width: 220px;
+} */
+.offcanvas{
+    width:'250px';
+    justify-content:'center'
+}

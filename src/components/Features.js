@@ -12,7 +12,6 @@ function Features() {
   return (
     <div>
     <Container>
-          
       <Row
         className="justify-content-center d-inline-flex"
         //  style={{textAlign:'center'}}

@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Navigate, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { clearLocalStorage, LoginAction } from "../redux/action/LoginAction";
-import Counter from "./Counter";
+import Counter from "./other_componets/Counter";
 import userData from '../userList.json'
 // import Header from "./Header";
 

@@ -10,7 +10,7 @@ import SideBar from "./SideBar";
 //
 // import * as FaIcons from "react-icons/fa";
 // import * as AiIcons from "react-icons/ai";
-// import SideNavBar from '../components/SideNavBar'
+import SideNavBar from '../components/SideNavBar'
 // import styled from "styled-components";
 // import { IconContext } from "react-icons";
 // import { SubMenu } from "react-pro-sidebar";
@@ -73,6 +73,7 @@ const showSidebar = () => setSidebar(!sidebar);
         {/* <Col>
       <Row> */}
         {/* <SideNavBar/> */}
+        {/* <SideBar/> */}
       <Navbar 
       variant="">
           <Nav className="me-auto" >
