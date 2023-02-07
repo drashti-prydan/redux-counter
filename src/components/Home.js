@@ -1,6 +1,5 @@
 import Counter from "./other_componets/Counter";
 import Operation from "./Operation";
-<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
 import { Card, Container } from "react-bootstrap";
 import axios from "axios";
@@ -44,16 +43,5 @@ function Home() {
       </Card> */}
     </Container>
   );
-=======
-import React from "react";
-// import{SideNav} from 'react-bootstrap'
-
-function Home() {
-    return (
-        <>
-        {/* <Slider></Slider> */}
-        </>
-    )
->>>>>>> parent of ef383104 (create pages)
 }
 export default Home;
