@@ -1,24 +1,42 @@
-.design{
+/* .design{
     justify-content: center;
     display:flex;
-    width: 257px;
-}
-.list {
-}
+    
+} */
+/* .offcanvas-start {
+    width: 200px;
+} */
 a {
-    font-size: 24px !important;
+    font-size: 20px !important;
     text-decoration-line: none;
     color:black;
+    margin: 10px;
+}
+a:hover{
+    /* background-color: rgba(179, 187, 201, 0.774); */
+    /* color: purple; */
+}
+/* .offcanvas .offcanvas-start .show{
+  width: 238px !important;
+} */
+.side{
+    background-color: transparent;
+    color: blueviolet;
+}
+.side:hover{
+    /* background-color: cadetblue; */
+    /* color: black; */
 }
 
 .dropdown-menu {
     border: none;
 }
-/* hr{
-
-    width: 220px;
-} */
+.dropdown-menu.show{
+    /* justify-items: center; */
+    padding-left: 70px;
+    display: grid;
+}
 .offcanvas{
-    width:'250px';
-    justify-content:'center'
+    width:250px !important;
+    justify-content:center
 }

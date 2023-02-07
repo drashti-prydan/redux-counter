@@ -1,38 +1,48 @@
 import { Button, Card, Col, Row } from "react-bootstrap";
 import dp from "../image/user.jpeg";
-import './User.css'
-const UserCard = ({ data }) => {
-  return (
-    <>
-      <Row >
-        <Col>
-          <Card style={{ width: "18rem" }}>
-            <Card.Img
-              variant="top"
-              src={dp}
-              style={{ backgroundColor: "black" }}
-            />
-            <Card.Body>
-              <Card.Title>{data.name}</Card.Title>
-              <Card.Text>
-                <b>phone:</b> {data.phone}
-              </Card.Text>
-              {/* <b> Address Details:</b> */}
-              <Card.Text>
-                <b>email:</b> {data.email}
-              </Card.Text>
+// import model from "../components/Model";
+// import "./User.css";
+import { UserCardStyled } from "./UserCardStyled";
+import { useState } from "react";
+// import { useDispatch } from "react-redux";
 
-              <Card.Text>
-                <b> Address Details:</b> {data.address.street},{" "}
-                {data.address.suite}, {data.address.city},{" "}
-                {data.address.zipcode}
-              </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </>
+const UserCard = ({ data ,handleUserData}) => {
+  const [show, setShow] = useState(false);
+  const [user, setuser] = useState([]);
+  const handleShow = () => {
+    setShow(true)
+    // console.warn('model data',data);
+  }
+
+  const handleClose = () => {
+    setShow(false);
+  }
+    ;
+  return (
+    <Col>
+      <UserCardStyled>
+        <Card className="Card">
+          <Card.Img variant="top" src={dp} />
+          <Card.Body>
+            <Card.Title>{data.name}</Card.Title>
+            <Card.Text>
+              <b>phone:</b> {data.phone}
+            </Card.Text>
+            <Card.Text>
+              <b>email:</b> {data.email}
+            </Card.Text>
+            <Card.Text>
+              <b>Address Details:</b> {data.address.street},{" "}
+              {data.address.suite}, {data.address.city}, {data.address.zipcode}
+            </Card.Text>
+            <Button onClick={() => handleUserData(data)} variant="outline-primary" className="btn">
+              Show Details
+            </Button>
+          </Card.Body>
+        </Card>
+      </UserCardStyled>
+          
+    </Col>
   );
 };
 

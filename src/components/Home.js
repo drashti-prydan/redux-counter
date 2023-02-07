@@ -1,27 +1,44 @@
 import Counter from "./other_componets/Counter";
 import Operation from "./Operation";
 import React, { useEffect, useState } from "react";
-import { Card, Container } from "react-bootstrap";
+import { Card, Container, Row } from "react-bootstrap";
 import axios from "axios";
 import UserCard from "./UserCard";
-import "./User.css";
+import UserDetailsModal from "./ModelText";
+// import "./User.css";
 // import{SideNav} from 'react-bootstrap'
 
 function Home() {
+  const [AllUser, setAllUser] = useState([]);
+  const [show, setShow] = useState(false);
   const [user, setuser] = useState([]);
+  // const [isShowing,setShowing]=useState();
+  const handleUserData = (data) => {
+    setuser(data);
+    setShow(true);
+
+  }
+  const handleShow = () => {
+    setShow(true)
+    // console.warn('model data',data);
+  }
+
+  const handleClose = () => {
+    setShow(false);
+  }
   const GetAllUser = () => {
     axios
       .get("https://jsonplaceholder.typicode.com/users")
       .then((res) => {
         console.warn(res);
         const GetUser = res.data;
-        setuser(res.data);
+        setAllUser(res.data);
         // console.warn(res);
       })
       .catch((error) => console.error(`Error:${error}`));
   };
 
-  // console.warn('Users',user);
+
   useEffect(() => {
     GetAllUser();
   }, []);
@@ -31,16 +48,13 @@ function Home() {
       <h2>this is home page </h2>
       </div>
 
-      <div className="gridcontainer">
-        {user.map((data) => (
-          <UserCard key={data.id} data={data} />
+      
+        <Row>
+        {AllUser.map((data) => (
+          <UserCard key={data.id} data={data} handleUserData={handleUserData}/>
         ))}
-      </div>
-      {/* <Card>
-        <div key={data.id}>
-          <h3>{user.name}</h3>
-        </div>
-      </Card> */}
+        </Row>
+        {show &&  <UserDetailsModal key={user.id} showModal={show} data={user} handleClose={handleClose}/>}
     </Container>
   );
 }
