@@ -1,6 +1,7 @@
 import React from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
+import { Col, Container, Image, Row } from 'react-bootstrap'
 import '../components/DashBoard.css'
+import fly from '../image/butterfly.png'
 
 function DashBoard() {
   return (
@@ -15,8 +16,8 @@ function DashBoard() {
           <Col style={{backgroundColor:'lightblue',height:"450px",borderRight:'2px solid black'}}>
           </Col>
 
-          <Col style={{backgroundColor:'lightgreen',height:"450px",borderRight:'2px solid black'}}>
-          
+          <Col style={{height:"450px",}}>
+          <Image src={fly} style={{backgroundColor:'lightpink'}}/>
           </Col>
         </Row>
 
