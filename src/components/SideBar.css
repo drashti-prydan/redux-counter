@@ -1,86 +1,47 @@
-/* .design{
-    justify-content: center;
-    display:flex;
-    
-} */
-/* .offcanvas-start {
-    width: 200px;
-} */
 a {
-    font-size: 20px !important;
-    text-decoration-line: none;
-    color:black;
-    margin: 12px;
+  font-size: 20px !important;
+  text-decoration-line: none;
+  color: black;
+  margin: 12px;
 }
-a:hover{
-    /* background-color: rgba(179, 187, 201, 0.774); */
-    color: purple;
+a:hover {
+  color: purple;
 }
-.side-wrapper{
-
-    /* z-index: 1000;
-    position: fixed;
-    left: 250px;
-    width: 0;
-    height: 100%;
-    margin-left: 30px;
-    overflow-y: auto;
-    overflow-x: hidden;
-    background: #222;
-    transition: all 0.5s ease; */
+.offcanvas-header {
+  font-size: 20px;
 }
-
-/* .offcanvas .offcanvas-start .show{
-  width: 238px !important;
-} */
-.offcanvas-header{
-    font-size: 20px;
+.offcanvas-title {
+  font-size: 31px;
 }
-.offcanvas-title{
-    font-size: 31px;
-}
-.side{
-    /* background-color: transparent; */
-    /* color: blueviolet; */
-}
-.side:hover{
-
-}
-.btn{
-    width: 96px;
-    justify-content : center;
-    margin-left: 52px;
-    margin-top: 20px;
-    display: flex;
+.btn {
+  width: 96px;
+  justify-content: center;
+  margin-left: 52px;
+  margin-top: 20px;
+  display: flex;
 }
 
 .dropdown-menu {
-    border: none;
+  border: none;
 }
-.dropdown-menu.show{
-    padding-left: 50px;
-    display: grid;
+.dropdown-menu.show {
+  padding-left: 50px;
+  display: grid;
 }
-.offcanvas{
-    width:250px !important;
-    justify-content:center;
-    /* z-index: 70; */
-    position: fixed;
-    /* left: 250px; */
-    /* width: 0; */
-    height: 100%;
-    /* margin-left: -240px; */
-    overflow-y: auto;
-    overflow-x: hidden;
-    background-color: white;
-    /* color: blueviolet; */
-    transition: all 0.5s ease;
+.offcanvas {
+  width: 250px !important;
+  justify-content: center;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: white;
+  transition: all 0.5s ease;
 }
 .sidebar-list:hover {
-    /* background-color: #afb88b; */
-    background-color: rgba(27, 58, 94, 0.144);
-    width: 220px;
-    margin-left: 10px;
-    border-right: 5px solid purple;
-    transition:  0.5s ease-in-out;
+  background-color: rgba(27, 58, 94, 0.144);
+  width: 220px;
+  margin-left: 10px;
+  border-right: 5px solid purple;
+  transition: 0.5s ease-in-out;
 }
