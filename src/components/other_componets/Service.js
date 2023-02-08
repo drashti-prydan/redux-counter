@@ -2,11 +2,6 @@ import React from "react";
 import { Container } from "react-bootstrap";
 
 export const Services = () => {
-// 	const [toggle, setToggle] = useState(false);
-
-//   const handleToggle = () => {
-//     setToggle(pre => !pre)
-//   }
 return (
 	<div className="services">
 	<h1>GeeksforGeeks Services</h1>

@@ -10,33 +10,77 @@ a {
     font-size: 20px !important;
     text-decoration-line: none;
     color:black;
-    margin: 10px;
+    margin: 12px;
 }
 a:hover{
     /* background-color: rgba(179, 187, 201, 0.774); */
-    /* color: purple; */
+    color: purple;
 }
+.side-wrapper{
+
+    /* z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: 30px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #222;
+    transition: all 0.5s ease; */
+}
+
 /* .offcanvas .offcanvas-start .show{
   width: 238px !important;
 } */
+.offcanvas-header{
+    font-size: 20px;
+}
+.offcanvas-title{
+    font-size: 31px;
+}
 .side{
-    background-color: transparent;
-    color: blueviolet;
+    /* background-color: transparent; */
+    /* color: blueviolet; */
 }
 .side:hover{
-    /* background-color: cadetblue; */
-    /* color: black; */
+
+}
+.btn{
+    width: 96px;
+    justify-content : center;
+    margin-left: 52px;
+    margin-top: 20px;
+    display: flex;
 }
 
 .dropdown-menu {
     border: none;
 }
 .dropdown-menu.show{
-    /* justify-items: center; */
-    padding-left: 70px;
+    padding-left: 50px;
     display: grid;
 }
 .offcanvas{
     width:250px !important;
-    justify-content:center
+    justify-content:center;
+    /* z-index: 70; */
+    position: fixed;
+    /* left: 250px; */
+    /* width: 0; */
+    height: 100%;
+    /* margin-left: -240px; */
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: white;
+    /* color: blueviolet; */
+    transition: all 0.5s ease;
+}
+.sidebar-list:hover {
+    /* background-color: #afb88b; */
+    background-color: rgba(27, 58, 94, 0.144);
+    width: 220px;
+    margin-left: 10px;
+    border-right: 5px solid purple;
+    transition:  0.5s ease-in-out;
 }

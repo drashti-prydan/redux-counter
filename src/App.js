@@ -35,12 +35,12 @@ function App() {
         <Route path="/calculator" element={<Calculator />}/>
         <Route path="/features" element={<Features />}/>
         <Route path='/aboutUs' element={<AboutUs/>} />
-        <Route path='/aboutUs/aim' element={<OurAim/>} />
-        <Route path='/aboutUs/vision' element={<OurVision/>} />
+        {/* <Route path='/aboutUs/aim' element={<OurAim/>} />
+        <Route path='/aboutUs/vision' element={<OurVision/>} /> */}
         <Route path="/service" element={<Services/>}/>    
-        <Route path='/services/services1' element={<ServicesOne/>} />
+        {/* <Route path='/services/services1' element={<ServicesOne/>} />
         <Route path='/services/services2' element={<ServicesTwo/>} />
-        <Route path='/services/services3' element={<ServicesThree/>} />  
+        <Route path='/services/services3' element={<ServicesThree/>} />   */}
       </Routes>
     </>
   );

@@ -1,6 +1,6 @@
 import "../components/SideBar.css";
-import React, { useState } from "react";
-import { Button, Nav, Navbar, NavDropdown, Offcanvas } from "react-bootstrap";
+import React from "react";
+import { Button, Nav, Navbar, Offcanvas } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import fly from "../image/Fly.png";
 import { useDispatch, useSelector } from "react-redux";
@@ -8,27 +8,18 @@ import { clear } from "../redux/action/CounterAction";
 import { clearStore } from "../redux/action/LoginAction";
 
 function SideBar() {
-  const [show, setShow] = useState(false);
   const navigate = useNavigate();
-  // const handleClose = () => setShow(false);
-  // const handleShow = () => setShow(true);
-  const [open, setOpen] = useState(true);
+
   const dispatch = useDispatch();
-  // const navigate = useNavigate();
+
   let isvalid = useSelector((state) => state.rootReducer.LoginReducer.isvalid);
-  // const [loggedIn, setLoggedIn] = useState(true);
+
   const clearLocalStorage = () => {
     localStorage.clear();
     dispatch(clear());
     dispatch(clearStore());
   };
 
-  const handleToggle = () => {
-    setOpen(!open);
-  };
-  // const handel=()=>{
-  //   navigate('/home')
-  // }
   return (
     <div className="m-2">
       {[false].map((expand) => (
@@ -52,7 +43,7 @@ function SideBar() {
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title
                   id={`offcanvasNavbarLabel-expand-${expand}`}
-                  style={{ fontSize: "35px" }}
+                  // style={{textShadow:'1px black'}}
                 >
                   𝓳𝓾𝓼𝓽 𝓯𝓵𝔂
                   <img
@@ -62,105 +53,115 @@ function SideBar() {
                   />
                 </Offcanvas.Title>
               </Offcanvas.Header>
+              <hr />
               <Offcanvas.Body>
                 <Nav className="">
-                  <Link to={"/"} className="fa fa-fw fa-home">
-                    &nbsp;DashBoard
-                  </Link>
+                  <div className="sidebar-list">
+                    <Link to={"/"} className="fa fa-fw fa-clipboard">
+                      &nbsp;DashBoard
+                    </Link>
+                  </div>
 
-                  <Link to={"/home"} className="fa fa-fw fa-home">
-                    &nbsp;Home
-                  </Link>
+                  <div className="sidebar-list">
+                    <Link to={"/home"} className="fa fa-fw fa-home">
+                      &nbsp;Home
+                    </Link>
+                  </div>
 
-                  <Link to={"/calculator"} className="fa fa-fw fa-calculator">
-                    &nbsp;Calculator
-                  </Link>
-                  <Link to={"/features"} className="fa fa-fw fa-calculator">
-                    &nbsp;Features
-                  </Link>
-                  <NavDropdown
+                  <div className="sidebar-list">
+                    <Link to={"/calculator"} className="fa fa-fw fa-calculator">
+                      &nbsp;Calculator
+                    </Link>
+                  </div>
+
+                  <div className="sidebar-list">
+                    <Link to={"/features"} className="fa fa-fw fa-leaf">
+                      &nbsp;Features
+                    </Link>
+                  </div>
+
+                  <div className="sidebar-list">
+                    <Link to={"/aboutus"} className="fa fa-fw fa-info">
+                      &nbsp;AboutUs
+                    </Link>
+                  </div>
+
+                  <div className="sidebar-list">
+                    <Link to={"/service"} className="fa fa-fw fa-gear">
+                      &nbsp;Services
+                    </Link>
+                  </div>
+                  {/* <NavDropdown
                     title="AboutUs"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
-                    <div className="">
                       <Link
                         to={"aboutUs/aim"}
-                        className="fa fa-fw fa-calculator"
+                        // className="fa fa-fw fa-target"
                       >
                         Aim
                       </Link>
-                    </div>
                     <br />
-                    <div>
                       <Link
                         to={"aboutUs/vision"}
-                        className="fa fa-fw fa-calculator"
+                        // className="fa fa-fw fa-vision"
                       >
                         vision
                       </Link>
-                    </div>
-                  </NavDropdown>
-                  {/* <hr/> */}
-                  <NavDropdown
+                  </NavDropdown> */}
+                  {/* <NavDropdown
                     title="services"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
-                    <div>
                       <Link
                         to={"/services/services1"}
-                        className="fa fa-fw fa-calculator"
+                        className="fa fa-fw fa-gear"
                       >
                         Services1
                       </Link>
-                    </div>
                     <br />
-                    <div>
                       <Link
                         to={"/services/services2"}
-                        className="fa fa-fw fa-calculator"
+                        className="fa fa-fw fa-gear"
                       >
                         Services2
                       </Link>
-                    </div>
                     <br />
-                    <div>
                       <Link
                         to={"/services/services3"}
-                        className="fa fa-fw fa-calculator"
+                        className="fa fa-fw fa-gear"
                       >
                         Services3
                       </Link>
-                    </div>
-                  </NavDropdown>
-                  {/* <hr/> */}
-                  <Link
-                    to={"https://www.prydan.com/contact/"}
-                    // style={{ textDecorationLine: "none", color: "black" }}
-                    target="_blank"
-                  >
-                    Contact Us
-                  </Link>
+                  </NavDropdown> */}
+                  <div className="sidebar-list">
+                    <Link
+                      to={"https://www.prydan.com/contact/"}
+                      className="fa fa fw fa-tablet"
+                      target="_blank"
+                    >
+                      {"  "}ContactUs
+                    </Link>
+                  </div>
                   {isvalid === null ? (
-                <Button
-                  icon="user-alt"
-                  className="justify-content-right d-flex"
-                  style={{ Buttonheight: "40px", }}
-                  onClick={() => navigate("/login")}
-                  variant="outline-success"
-                >
-                  Log in
-                </Button>
-              ) : (
-                <Button
-                  icon="user-alt"
-                  className="justify-content-right d-flex"
-                  style={{ Buttonheight: "40px"}}
-                  onClick={clearLocalStorage}
-                  variant="outline-secondary"
-                >
-                  Log out
-                </Button>
-              )}
+                    <Button
+                      icon="user-alt"
+                      className="btn"
+                      onClick={() => navigate("/login")}
+                      variant="outline-success"
+                    >
+                      Log in
+                    </Button>
+                  ) : (
+                    <Button
+                      icon="user-alt"
+                      className="btn"
+                      onClick={clearLocalStorage}
+                      variant="outline-secondary"
+                    >
+                      Log out
+                    </Button>
+                  )}
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>

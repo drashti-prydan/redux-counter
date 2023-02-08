@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import Modal from 'react-bootstrap/Modal';
 
 
@@ -23,7 +23,7 @@ console.warn('Model',data);
             Close
           </Button>
           <Button variant="primary" onClick={()=>handleClose()}>
-            Save Changes
+            Save
           </Button>
         </Modal.Footer>
       </Modal>
