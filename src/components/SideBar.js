@@ -33,7 +33,8 @@ function SideBar() {
                 src={fly}
                 alt=""
                 style={{ width: "40px", paddingLeft: "10px" }}
-              />
+                />
+                {/* <Button className="log ">log in</Button> */}
             </Navbar.Brand>
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
@@ -148,7 +149,7 @@ function SideBar() {
                       icon="user-alt"
                       className="btn"
                       onClick={() => navigate("/login")}
-                      variant="outline-success"
+                      // variant="outline-purple"
                     >
                       Log in
                     </Button>

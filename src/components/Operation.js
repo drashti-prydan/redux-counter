@@ -3,7 +3,6 @@ import { Button, Col, Container, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Swal from "sweetalert2";
 import { add, clear, sub, sweet } from "../redux/action/CounterAction";
-// import isvalid from '.././redux/reducer/LoginReducer'
 import LoginReducer from "../redux/reducer/rootReducer";
 
 const Operation = () => {
@@ -11,7 +10,7 @@ const Operation = () => {
   const dispatch = useDispatch("");
   let data = useSelector((state) => state.rootReducer.counterData.count);
   let isvalid = useSelector((state) => state.rootReducer.LoginReducer.isvalid);
-  // console.warn(data);
+
   const Add = () => {
     dispatch(add(increment));
   };
@@ -38,7 +37,7 @@ const Operation = () => {
       icon: "warning",
 
       showCancelButton: true,
-      // fontsize: '14px',
+
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes, delete it!",

@@ -1,10 +1,7 @@
 import { Button, Card, Col, Row } from "react-bootstrap";
 import dp from "../image/user.jpeg";
-// import model from "../components/Model";
-// import "./User.css";
 import { UserCardStyled } from "./UserCardStyled";
 import { useState } from "react";
-// import { useDispatch } from "react-redux";
 
 const UserCard = ({ data ,handleUserData}) => {
   const [show, setShow] = useState(false);

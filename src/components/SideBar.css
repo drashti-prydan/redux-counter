@@ -19,6 +19,14 @@ a:hover {
   margin-left: 52px;
   margin-top: 20px;
   display: flex;
+  border: 1px solid purple;
+  background-color: white;
+  color: purple;
+}
+
+.btn:hover{
+  background-color: purple;
+  border: 1px solid white
 }
 
 .dropdown-menu {
@@ -28,9 +36,13 @@ a:hover {
   padding-left: 50px;
   display: grid;
 }
+.log {
+  display: inline-flex;
+  margin-left: 1000px;
+  margin-top: 0px;
+}
 .offcanvas {
   width: 250px !important;
-  justify-content: center;
   position: fixed;
   height: 100%;
   overflow-y: auto;
