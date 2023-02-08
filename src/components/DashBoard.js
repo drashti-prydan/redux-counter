@@ -1,11 +1,28 @@
 import React from 'react'
-import { Container } from 'react-bootstrap'
+import { Col, Container, Row } from 'react-bootstrap'
+import '../components/DashBoard.css'
 
 function DashBoard() {
   return (
-    <Container className="justify-content-center d-flex">
+    <>
+    <Container className="section">
      <h1>This is a DashBoard</h1>
     </Container>
+    <hr/>
+   
+      <div>
+        <Row>
+          <Col style={{backgroundColor:'lightblue',height:"450px",borderRight:'2px solid black'}}>
+          </Col>
+
+          <Col style={{backgroundColor:'lightgreen',height:"450px",borderRight:'2px solid black'}}>
+          
+          </Col>
+        </Row>
+
+      </div>
+    
+    </>
   )
 }
 
