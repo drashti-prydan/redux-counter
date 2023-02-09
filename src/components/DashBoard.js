@@ -1,7 +1,7 @@
 import React from 'react'
 import { Col, Container, Image, Row } from 'react-bootstrap'
 import '../components/DashBoard.css'
-import fly from '../image/butterfly.png'
+import fly from '../image/homeimage.png'
 
 function DashBoard() {
   return (
@@ -12,14 +12,15 @@ function DashBoard() {
     <hr/>
    
       <div>
+          <Container>
         <Row>
-          <Col style={{backgroundColor:'lightblue',height:"450px",borderRight:'2px solid black'}}>
+          <Col style={{backgroundColor:'green',height:"450px"}}>
           </Col>
-
-          <Col style={{height:"450px",}}>
-          <Image src={fly} style={{backgroundColor:'lightpink'}}/>
+          <Col style={{height:"450px",backgroundColor:'pink'}}>
+          <img src={fly} className="fly"/>
           </Col>
         </Row>
+          </Container>
 
       </div>
     

@@ -20,6 +20,7 @@ import  { AboutUs, OurAim, OurVision } from './components/AboutUs';
 import { Services, ServicesOne, ServicesThree, ServicesTwo } from "./components/other_componets/Service";
 
 import DashBoard from "./components/DashBoard";
+import List from "./components/List";
 function App() {
   const location = useLocation();
   useEffect(() => {
@@ -34,6 +35,7 @@ function App() {
         <Route path="/login" element={<LogIn />} />
         <Route path="/calculator" element={<Calculator />}/>
         <Route path="/features" element={<Features />}/>
+        <Route path="/list" element={<List/>}/> 
         <Route path='/aboutUs' element={<AboutUs/>} />
         {/* <Route path='/aboutUs/aim' element={<OurAim/>} />
         <Route path='/aboutUs/vision' element={<OurVision/>} /> */}

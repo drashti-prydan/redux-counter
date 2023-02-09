@@ -6,6 +6,7 @@ import fly from "../image/Fly.png";
 import { useDispatch, useSelector } from "react-redux";
 import { clear } from "../redux/action/CounterAction";
 import { clearStore } from "../redux/action/LoginAction";
+import list from "./List";
 
 function SideBar() {
   const navigate = useNavigate();
@@ -78,6 +79,11 @@ function SideBar() {
                   <div className="sidebar-list">
                     <Link to={"/features"} className="fa fa-fw fa-leaf">
                       &nbsp;Features
+                    </Link>
+                  </div>
+                  <div className="sidebar-list">
+                    <Link to={"/list"} className="fa fa-fw fa-calculator">
+                      &nbsp;list
                     </Link>
                   </div>
 
