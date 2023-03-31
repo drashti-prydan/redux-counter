@@ -47,7 +47,7 @@ function Features() {
               "Node. js is an open-source, cross-platform JavaScript runtime environment and library for running web applications outside the client's browser."
             }
             // color={"baby pink"}
-            Link={"https://redux.js.org/"}
+            Link={"https://nodejs.org/en/docsz"}
             />
         </Col>
         <Col className="sm-4">

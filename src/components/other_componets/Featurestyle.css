@@ -1,7 +1,7 @@
 .size{
   width: 18rem;
-  height: 31rem;
-  /* padding: 11px; */
+  height: auto;
+  padding: 11px;
 }
 .size:hover{
   box-shadow: 1px 2px 3px 2px rgb(44, 75, 104);
@@ -18,9 +18,16 @@
     /* display: -webkit-inline-box; */
    text-align:-webkit-auto;
 }
-.buttonalign{
+.po{
   justify-items: center;
-  display: block;
-  /* position: relative; */
-  padding-left: 61px;
+  display:flex;
+  /* align-items: center; */
+  margin-bottom: 20px;
+}
+.buttonalign{
+  width: 80px;
+  color: purple;
+}
+.buttonalign:hover{
+  color: white;
 }

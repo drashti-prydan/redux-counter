@@ -28,12 +28,12 @@ function FeaturesCard(props) {
                 </p>
                 {/* <li><b>Colour:</b>&nbsp;&nbsp;{props.color}</li> */}
               </Card.Text>
-              <div className="buttonalign">
+              <div className="po">
                 <Button variant="primary">
                   <Link
                     to={props.Link}
                     target={"_blank"}
-                    style={{ color: "white" }}
+                    className="buttonalign"
                   >
                     More Details
                   </Link>
